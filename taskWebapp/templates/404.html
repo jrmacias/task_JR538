@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+  Page Not Found
+{% endblock %}
+
+<!-- Upper section -->
+{% block upper %}
+  <section class="py-5 text-center container">
+    <div class="row py-lg-3">
+      <div class="col-sm-12">
+        <h1 class="text-primary">Page Not Found (HTTP 404)</h1>
+        <p class="lead text-muted">Sorry, couldn't find that page.</p>
+        <hr />
+        <p>
+          Go back to the
+          <a class="link-primary" href="{% url 'home' %}" role="button" title="Go back to the homepage">
+            <i class="bi bi-house-check"></i>
+            Homepage
+          </a>
+        </p>
+      </div>
+    </div>
+  </section>
+{% endblock %}

@@ -1,0 +1,50 @@
+<!-- Navigation bar -->
+
+<div class="p-5 bg-primary text-white text-center">
+  <h1>Task JR538 Web-UI</h1>
+  <p>Fetch metadata and result files of public metabolomics datasets.</p>
+</div>
+
+<nav class="navbar navbar-expand-sm border">
+  <div class="container-fluid">
+    <ul class="navbar-nav">
+      <a class="navbar-brand" href="{% url 'web:home' %}" title="Task JR538 Web-UI">
+        <i class="bi bi-house-check"></i>
+        HOME
+      </a>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'web:search' %} " title="go to the search form">Search</a>
+      </li>
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <i class="bi bi-list"></i>
+          API documentation
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+          <li>
+            <a class="dropdown-item" href="api/" title="Django REST framework documentation">Django</a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="{% url 'api:schema-swagger-ui' %}" title="Swagger documentation">Swagger</a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="{% url 'api:schema-redoc' %}" title="ReDoc documentation">ReDoc</a>
+          </li>
+          <div class="dropdown-divider"></div>
+          <li>
+            <a class="dropdown-item" href="{% url 'admin:index' %}" title="Admin page">
+              Admin
+              <i class="bi bi-lock-fill"></i>
+            </a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+    {% comment %} <form class="d-flex">
+      <input class="form-control me-2" type="text" placeholder="Search" />
+      <button class="btn btn-primary" type="button">Search</button>
+    </form> {% endcomment %}
+  </div>
+</nav>
