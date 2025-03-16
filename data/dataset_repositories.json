@@ -1,0 +1,22 @@
+{
+    "dataset_repositories": [
+        {
+            "id": 1,
+            "name": "MetaboLights",
+            "accession_prefix": "MTBLS",
+            "repository_website": "https://ftp.ebi.ac.uk/pub/databases/metabolights/studies/public/"
+        },
+        {
+            "id": 2,
+            "name": "Metabolomics Workbench",
+            "accession_prefix": "ST",
+            "repository_website": "https://www.metabolomicsworkbench.org/rest/study/study_id/ST/available"
+        },
+        {
+            "id": 3,
+            "name": "MetaboBank",
+            "accession_prefix": "MTBK",
+            "repository_website": "https://ddbj.nig.ac.jp/public/metabobank/"
+        }
+    ]
+}

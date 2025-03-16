@@ -1,0 +1,4 @@
+"Repository Name","Dataset Accession Number","Repository Website","Expected Metadata and Result Files"
+"MetaboLights","MTBLSxxx","https://www.ebi.ac.uk/metabolights/ws/studies","s_xxx.txt i_xxxx.txt a_xxxx.txt m_xxx.tsv"
+"Metabolomics Workbench","STxxx","https://www.metabolomicsworkbench.org/rest/study/study_id/ST/available/","STxxx.json STxxx.mwtab.txt"
+"MetaboBank","MTBKxxx","https://ddbj.nig.ac.jp/public/metabobank/study/","xxx.idf.txt xxx.sdrf.txt xxx.maf.txt"
