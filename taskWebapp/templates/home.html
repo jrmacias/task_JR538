@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block title %}
+  Task JR538 Web-UI
+{% endblock %}Ø
+<!-- Upper section -->
+{% block upper %}
+  <section class="py-5 text-center container">
+    <div class="row py-lg-3">
+      <div class="col-sm-12">
+        <h5>Sample application to retrieve metabolomics public datasets (metadata and result files) from relevant repositories.</h4>
+      </div>
+    </div>
+  </section>
+{% endblock %}
+
+<!-- Mid section -->
+{% block content %}
+  <section class="py-5 text-center container">
+    <div class="row py-lg-3">
+      <div class="col-sm-12">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>
+                <a href="https://www.ebi.ac.uk/metabolights" target="_blank">MetaboLights</a>
+              </th>
+              <th>
+                <a href="https://www.metabolomicsworkbench.org" target="_blank">Metabolomics Workbench</a>
+              </th>
+              <th>
+                <a href="https://www.ddbj.nig.ac.jp/metabobank" target="_blank">Metabobank</a>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <a class="text-decoration-none link-primary" href="details/MTBLS1/">MTBLS1</a>
+              </td>
+              <td>
+                <a class="text-decoration-none link-primary" href="details/ST000001/">ST000001</a>
+              </td>
+              <td>
+                <a class="text-decoration-none link-primary" href="details/MTBKS27/">MTBKS27</a>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <a class="text-decoration-none link-primary" href="details/MTBLS123/">MTBLS123</a>
+              </td>
+              <td>
+                <a class="text-decoration-none link-primary" href="details/ST000025/">ST000025</a>
+              </td>
+              <td>
+                <a class="text-decoration-none link-primary" href="details/MTBKS93/">MTBKS93</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <hr />
+
+    <a class="btn btn-outline-primary shadow" title="go to the search form" href="{% url 'web:search' %}">
+      Search
+      <i class="bi bi-search"></i>
+    </a>
+  </section>
+{% endblock %}

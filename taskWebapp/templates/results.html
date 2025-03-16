@@ -1,0 +1,95 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+  Task JR538 Web-UI: results
+{% endblock %}
+
+<!-- Upper section -->
+{% block upper %}
+  <section class="py-5 container">
+    <h3>Dataset: {{ accession }}</h3>
+
+    <div class="row py-lg-3">
+      <div class="col-sm-12">
+        <div class="card">
+          <div class="card-header text-center">
+            <p class="lead text-muted">
+              <a href="{% url 'web:download_metadata_file' accession=accession %}" class="btn btn-outline-secondary btn-sm shadow" title="Download metadata files." id="metab_download_btn">
+                <i class="bi bi-file-earmark-arrow-down"></i>
+                Download
+              </a>
+              <strong>Title:</strong>
+              {{ Title }}
+            </p>
+          </div>
+
+          <div class="card-body">
+            <p>
+              <strong>Description:</strong>
+              {{ Description }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}
+
+<!-- Mid section -->
+{% block content %}
+  <section class="py-5 container">
+    <div class="row py-lg-3">
+      <div class="col-sm-6">
+        <div class="card">
+          <div class="card-header text-center">
+            <h5>
+              <a href="" target="_blank" class="btn btn-outline-secondary btn-sm shadow disabled" title="Download metabolites file">
+                <i class="bi bi-file-earmark-arrow-down"></i>
+                Download
+              </a>
+              Metabolites
+            </h5>
+          </div>
+
+          <table class="table table-hover">
+            <tbody>
+              {% for metabolite in Metabolites %}
+                <tr>
+                  <td>{{ metabolite }}</td>
+                </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="col-sm-6">
+        <div class="card">
+          <div class="card-header text-center">
+            <h5>
+              <a href="" target="_blank" class="btn btn-outline-secondary btn-sm shadow disabled" title="Download rawdata files">
+                <i class="bi bi-file-earmark-arrow-down"></i>
+                Download
+              </a>
+              Rawdata Files
+            </h5>
+          </div>
+          <ul class="list-group list-group-flush">
+            {% for rawdata_file in Rawdata %}
+              <table class="table table-hover">
+                <tbody>
+                  {% for metabolite in Metabolites %}
+                    <tr>
+                      <td>{{ rawdata_file }}</td>
+                    </tr>
+                  {% endfor %}
+                </tbody>
+              </table>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+{% load crispy_forms_tags %}
+
+<!-- Mid section -->
+{% block content %}
+  <section class="py-5 text-center container">
+    <div class="row py-lg-3">
+      <div class="col-sm-12">
+        <div class="form-group row">
+          <form action="/search/" class="novalidate" method="post">
+            {% csrf_token %}
+            {{ form|crispy }}
+
+            <div class="d-grid">
+              <button type="submit" class="btn btn-outline-primary btn-block shadow">
+                Search
+                <i class="bi bi-search"></i>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}
