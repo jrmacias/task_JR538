@@ -55,7 +55,7 @@ This instructions are provided for a Linux or Mac OS environment. The applicatio
 - Set up a database, populating tables with initial data and create an administrator account to get access to the admin section of the web UI
     ``` bash
     python manage.py migrate
-    python manage.py createsuperuser
+    python manage.py createsuperuser --username admin --email admin@example.com
     ```
 - Finally, start the server, replacing local IP and port if needed
     ``` bash
